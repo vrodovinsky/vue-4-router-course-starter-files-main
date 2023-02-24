@@ -8,18 +8,14 @@
     </div>
 </template>
 
-<script>
-export default{
-    data(){
-        return{
-            username: window.user
-        }
-    },
-    methods: {
-        logout(){
-            window.user = null
-            this.$router.push({name: 'home'})
-        }
+<script setup>
+import {ref} from 'vue'
+import {useRouter} from 'vue-router'
+    const username = ref(window.user)
+    const router = useRouter()
+    const logout = () =>{
+        window.user = null
+        router.push({name: 'home'})
     }
-}
 </script>
+
