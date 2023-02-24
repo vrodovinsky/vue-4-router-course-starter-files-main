@@ -5,17 +5,15 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import {RouterLink} from 'vue-router'
+import {computed} from 'vue'
 
-export default{
-    props: {
-        ...RouterLink.props
-    },
-    computed: {
-        isExternal(){
-            return typeof this.to === 'string' && this.to.startsWith('http')
-        }
-    }
-}
+const props = defineProps({
+    ...RouterLink.props
+})
+
+const isExternal = computed(() => {
+    return typeof props.to === 'string' && props.to.startsWith('http')
+})
 </script>
