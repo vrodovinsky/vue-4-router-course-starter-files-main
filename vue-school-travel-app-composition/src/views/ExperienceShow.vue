@@ -11,13 +11,12 @@ import sourceData from '@/data.json'
 import {computed} from 'vue'
 
 const props = defineProps({
-    id: {type: Number, required: true},
+    id: {type: Number, required: true}, 
     experienceSlug: {type: String, required: true}
 })
-const destination = computed(() => {
-    return sourceData.destinations.find((destination) => destination.id === props.id)
-})
+
 const experience = computed (() => {
-    return this.destination.experiences.find(experience => experience.slug === props.experienceSlug)
+    const destination = sourceData.destinations.find((destination) => destination.id === props.id)
+    return destination.experiences.find(experience => experience.slug === props.experienceSlug)
 })
 </script>
