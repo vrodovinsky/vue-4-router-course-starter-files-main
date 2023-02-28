@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as s,a as c}from"./index-4e0e73d1.js";const o={},t={class:"hawaii"},_=c("h1",null,"Hawaii",-1),n=[_];function i(r,d){return a(),s("div",t,n)}const f=e(o,[["render",i]]);export{f as default};
