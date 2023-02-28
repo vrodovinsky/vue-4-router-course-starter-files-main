@@ -1,0 +1,1 @@
+import{_ as n,i as t,o as a,c as r,a as c}from"./index-b6351c63.js";const i={setup(){t((e,o)=>{if(!window.confirm("Are you sure you want to leave? Invoices are awesome!"))return!1})}},_=c("h1",null,"Invoices",-1),u=[_];function f(e,o,s,l,d,p){return a(),r("div",null,u)}const v=n(i,[["render",f]]);export{v as default};
